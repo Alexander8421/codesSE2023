@@ -1,6 +1,11 @@
 package org.hbrs.se1.ws23.uebung1.view;
 
+import org.hbrs.se1.ws23.uebung1.control.Factory;
+import org.hbrs.se1.ws23.uebung1.control.GermanTranslator;
+
 public class Client {
+
+	//GermanTranslator GT;
 
 		/*
 		 * Methode zur Ausgabe einer Zahl auf der Console
@@ -14,8 +19,10 @@ public class Client {
 			//
 			// Strenge Implementierung gegen das Interface Translator gewuenscht!
 
-			System.out.println("Das Ergebnis der Berechnung: " +
-					"[das Ergebnis an dieser Stelle]"  );
+			 GermanTranslator GT = (GermanTranslator) Factory.createTranslator();
+			 String erg = GT.translateNumber(aNumber);
+
+			System.out.println("Das Ergebnis der Berechnung: " + erg); //"[das Ergebnis an dieser Stelle]"  );
 
 		 }
 }

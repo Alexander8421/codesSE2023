@@ -32,4 +32,14 @@ public class Container {
     public int size(){
         return theContainer.size();
     }
+
+    public int findMember(int id){
+        for(i=0; i<theContainer.size();i++) {
+            Member current = (Member) theContainer.get(i);
+            if (current.getID() == id) {
+                return 1;
+            }
+        }
+        return 0;
+    }
 }

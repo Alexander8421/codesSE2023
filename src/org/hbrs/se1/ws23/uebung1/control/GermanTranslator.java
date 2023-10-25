@@ -16,7 +16,7 @@ public class GermanTranslator implements Translator {
 			ret = schriftlicheZahlen[number-1];
 
 		}catch(Exception E){
-			ret = "Übersetzung der Zahl [übergebeneZahl] nicht möglich ([Ausgabe der Versionsnummer des Translators aus Interface])";
+			ret = "Übersetzung der Zahl "+number+" nicht möglich ([Ausgabe der Versionsnummer des Translators aus Interface])";//"Übersetzung der Zahl [übergebeneZahl] nicht möglich ([Ausgabe der Versionsnummer des Translators aus Interface])";
 		}
 
 

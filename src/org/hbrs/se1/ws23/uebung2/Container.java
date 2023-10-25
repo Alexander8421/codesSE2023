@@ -9,6 +9,9 @@ public class Container {
     java.util.ArrayList theContainer = new java.util.ArrayList<Member>();
 
     public void addMember(Member member) throws ContainerException{
+        for(i=0; i<theContainer.size();i++){
+            if (theContainer[i].getID() = member.getID()){throw new ContainerException(("Das Member-Objekt mit der ID "+member.getID()+" ist bereits vorhanden!"));}
+        }
         theContainer.add(member);
 
     }

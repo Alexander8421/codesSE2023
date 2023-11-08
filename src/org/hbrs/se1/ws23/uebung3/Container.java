@@ -1,4 +1,4 @@
-package org.hbrs.se1.ws23.uebung2;
+package org.hbrs.se1.ws23.uebung3;
 
 public class Container {
 
@@ -6,7 +6,7 @@ public class Container {
     java.util.ArrayList theContainer = new java.util.ArrayList<Member>();
 
 
-    //static int number = 0;
+    static int number = 0;
 
     //public Container() throws Exception{if (number==0){number=1;}else{throw new Exception("Container bereits vorhanden");}    }
     //public Container(ArrayList theContainer) {this.theContainer = theContainer;    }
@@ -27,7 +27,7 @@ public class Container {
 
 
 
-    public void addMember(Member member) throws ContainerException{
+    public void addMember(Member member) throws ContainerException {
         for(int i=0; i<theContainer.size();i++){
             Member current=(Member) theContainer.get(i);
             if (current.getID() == member.getID()){throw new ContainerException(("Das Member-Objekt mit der ID "+member.getID()+" ist bereits vorhanden!"));}

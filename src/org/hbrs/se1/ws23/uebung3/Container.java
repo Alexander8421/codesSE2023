@@ -8,7 +8,7 @@ public class Container {
 
     static int number = 0;
 
-    //public Container() throws Exception{if (number==0){number=1;}else{throw new Exception("Container bereits vorhanden");}    }
+    public Container() throws Exception{if (number==0){number=1;}else{throw new Exception("Container bereits vorhanden");}    }
     //public Container(ArrayList theContainer) {this.theContainer = theContainer;    }
 
     //public void store() throws PersistenceException{}
@@ -46,10 +46,13 @@ public class Container {
         theContainer.remove(theContainer.get(i));
         return "Member mit ID "+id+" nicht gefunden";
     }
-    public void dumb(){
-        for (int i=0; i<theContainer.size(); i++){System.out.println(theContainer.get(i).toString());}
 
+    public java.util.ArrayList<Member> getCurrentList(){
+        return theContainer;
     }
+
+    //public void dumb(){for (int i=0; i<theContainer.size(); i++){System.out.println(theContainer.get(i).toString());}}
+    //for (int i=0; i<theContainer.size(); i++){System.out.println(theContainer.get(i).toString());}
 
     public int size(){
         return theContainer.size();
